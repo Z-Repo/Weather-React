@@ -3,7 +3,7 @@ import { AsyncPaginate } from "react-select-async-paginate";
 import { GEO_API_URL, geoAPIOptions } from "../../api";
 
 const Search = ({onSearchChange}) => {
-
+    console.log(geoAPIOptions)
     const [search, setSearch] = useState(null);
 
     const loadOptions = (inputValue) => {

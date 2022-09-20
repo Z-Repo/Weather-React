@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/api.js",
+            "env": {
+                "apiKey" : "40f93955f9msh0551c38254531e3p1fc359jsn86944163e6cc"
+            }
+        }
+    ]
+}
