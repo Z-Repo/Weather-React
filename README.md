@@ -1,3 +1,13 @@
+This is a weather app.
+Please type a city into the search bar.
+Using these API's:
+https://home.openweathermap.org/
+https://rapidapi.com/wirefreethought/api/geodb-cities
+To make your own working version follow these steps in the terminal:
+`npx create-react-app`
+`npm i react-accessible-accordion`
+`npm i react-select--async-paginate`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
