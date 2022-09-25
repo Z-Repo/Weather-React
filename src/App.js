@@ -11,10 +11,10 @@ function App() {
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
     const currentWeatherFetch = fetch(
-      `${CW_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OW_KEY}`
+      `${CW_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OW_KEY}&units=metric`
     );
     const forecastFetch = fetch(
-      `${FC_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OW_KEY}`
+      `${FC_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OW_KEY}&units=metric`
     );
 
     Promise.all([currentWeatherFetch, forecastFetch])
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="container">
       <Search onSearchChange={handleOnSearchChange} />
-      <CurrentWeather />
+      {currentWeather && <CurrentWeather data={currentWeather} />}
     </div>
   );
 }
