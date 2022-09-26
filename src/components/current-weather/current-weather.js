@@ -1,6 +1,6 @@
 import "./current-weather.css";
 
-const celciusToFerienhiet = (celcius) => {
+export const celciusToFerienhiet = (celcius) => {
   return (celcius * 9) / 5 + 32;
 };
 
