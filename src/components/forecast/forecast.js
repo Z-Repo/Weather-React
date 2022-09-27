@@ -20,15 +20,13 @@ const WEEK_DAYS = [
 
 const Forecast = ({ data }) => {
   const dayInAWeek = new Date().getDay();
-  console.log(dayInAWeek);
   const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(
     WEEK_DAYS.slice(0, dayInAWeek)
   );
-  console.log(forecastDays);
 
   return (
     <>
-      <label className="title">Daily</label>
+      <label className="title"></label>
       <Accordion allowZeroExpanded>
         {data.list.slice(0, 7).map((item, index) => (
           <AccordionItem key={index}>
