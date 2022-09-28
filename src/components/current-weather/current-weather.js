@@ -1,4 +1,4 @@
-import "./current-weather.css";
+import "../../index.css";
 
 export const celciusToFerienhiet = (celcius) => {
   return (celcius * 9) / 5 + 32;

@@ -1,4 +1,4 @@
-import "./forecast.css";
+import "../../index.css";
 import { celciusToFerienhiet } from "../current-weather/current-weather";
 import {
   Accordion,

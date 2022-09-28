@@ -1,4 +1,4 @@
-import "./photo.css";
+import "../../index.css";
 const Photo = (photo) => {
   const bg = photo.data.results[0].urls.full;
   console.log(bg);

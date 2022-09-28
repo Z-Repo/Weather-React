@@ -7,6 +7,7 @@ To make your own working version follow these steps in the terminal:
 `npx create-react-app`
 `npm i react-accessible-accordion`
 `npm i react-select--async-paginate`
+`npm i react-switch`
 
 # Getting Started with Create React App
 
