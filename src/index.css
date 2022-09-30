@@ -5,6 +5,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(134, 134, 134);
+  background-image: url("clouds.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
@@ -238,16 +241,24 @@ code {
 
 /* Switch */
 .switch{
-  position: fixed;
-  margin-left: 82%;
+  position: absolute;
+  margin-top: 3%;
   padding-top: 1%;
   font-size: 18px;
   font-weight: 600;
+  text-shadow: 2px 2px 3px #333;
+}
+.switch2{
+  padding-top: 5%;
 }
 
 #dark .switch {
-  color: black;
+  color:#fff;
+  -webkit-text-stroke: 1px #333;
+  text-shadow: 2px 2px 3px #333;
 }
 #light .switch{
-  color:#fff
+  color: #fff;
+  -webkit-text-stroke: 1px #333;
+  text-shadow: 2px 2px 3px #333;
 }

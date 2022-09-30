@@ -1,5 +1,4 @@
 import "../../index.css";
-import { celciusToFerienhiet } from "../current-weather/current-weather";
 import {
   Accordion,
   AccordionItem,
@@ -18,11 +17,16 @@ const WEEK_DAYS = [
   "Sunday",
 ];
 
-const Forecast = ({ data }) => {
+const Forecast = ({ data, tempType }) => {
   const dayInAWeek = new Date().getDay();
   const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(
     WEEK_DAYS.slice(0, dayInAWeek)
   );
+
+  let degree = "metric";
+  {
+    tempType === "metric" ? (degree = "°F") : (degree = "°C");
+  }
 
   return (
     <>
@@ -43,12 +47,9 @@ const Forecast = ({ data }) => {
                     {item.weather[0].description}
                   </label>
                   <label className="temp-range">
-                    {Math.round(item.main.temp_min)}°C-
-                    {Math.round(item.main.temp_max)}°C
-                  </label>
-                  <label className="temp-rangeF">
-                    {Math.round(celciusToFerienhiet(item.main.temp_min))}°F-
-                    {Math.round(celciusToFerienhiet(item.main.temp_max))}°F
+                    {Math.round(item.main.temp_min)}
+                    {degree}-{Math.round(item.main.temp_max)}
+                    {degree}
                   </label>
                 </div>
               </AccordionItemButton>
@@ -57,8 +58,8 @@ const Forecast = ({ data }) => {
               <div className="daily-details">
                 <span className="detail-label">Feels like</span>
                 <span className="detail-value">
-                  {Math.round(item.main.feels_like)}°C/
-                  {Math.round(celciusToFerienhiet(item.main.feels_like))}°F
+                  {Math.round(item.main.feels_like)}
+                  {degree}
                 </span>
               </div>
               <div className="daily-details">
