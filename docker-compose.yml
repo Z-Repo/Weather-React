@@ -1,0 +1,10 @@
+version: "3"
+services:
+    weather:
+      stdin_open: true
+      tty: true
+      build: .
+      ports:
+        - "3000:3000"
+      env_file:
+        - ./.env

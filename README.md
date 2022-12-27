@@ -1,13 +1,49 @@
-This is a weather app.
+# This is a weather app.
+
 Please type a city into the search bar.
 Using these API's:
 https://home.openweathermap.org/
 https://rapidapi.com/wirefreethought/api/geodb-cities
+https://api.unsplash.com/
 To make your own working version follow these steps in the terminal:
-`npx create-react-app`
-`npm i react-accessible-accordion`
-`npm i react-select--async-paginate`
-`npm i react-switch`
+
+### `npx create-react-app`
+
+### `npm i react-accessible-accordion`
+
+### `npm i react-select--async-paginate`
+
+### `npm i react-switch`
+
+Incorporating Docker and a brief tutorial on the process;
+
+### `docker build -t weather-app .`
+
+- will build an image in docker with all files, and the -t tag allows you to name your image
+
+### `docker image ls`
+
+- shows the current images
+
+### `docker run --env-file ./.env -dp 3000:3000 --name weather-app weather-app`
+
+- will spin up a container from weather-app.
+  --name tag will name your container.
+  -p tag will designate the port.
+  -d tag allows it to run in the background.
+  --env-file tag runs any environmental variables in the .env to the app.
+
+with a docker-compose.yml file we can now do
+
+### `docker-compose up -d`
+
+and
+
+### `docker-compose down`
+
+to spin up and down the container.
+
+Helpful video: https://www.youtube.com/watch?v=3xDAU5cvi5E
 
 # Getting Started with Create React App
 
