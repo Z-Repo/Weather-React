@@ -39,6 +39,8 @@ with a docker-compose.yml file we can now do
 
 and
 
+### `docker rm (name) -f`
+
 ### `docker-compose down`
 
 to spin up and down the container.

@@ -1,7 +1,7 @@
 # Chooses the back-end image from dockerhub
 FROM node:19-alpine
 # Chooses the name of the file in the container
-WORKDIR /weather
+WORKDIR /weather-app
 # Chooses to copy only the package.json
 COPY package.json .
 # Installs all the dependancies in the json
